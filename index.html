@@ -1,25 +1,88 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Developer</title>
 </head>
 
 <body>
-    <div style="height:150px ; width:1200px ; position: fixed;  background-color: rgb(46, 85, 194); margin: 0 0 0 215px;">Ben buradayım.</div>
-    <table border="1">
-        <tr>
-            <th style="height: 150px;"></th>
-            <th style="height: 150px; width: 2000px;"></th>
-        </tr>
-        <tr>
-            <td width="200px" rowspan="2"><iframe src="1.html" style="width: 200px;height: 7000px;"></iframe></td>
-            <td height="7000px"></td>
-        </tr>
+    <div class="menu">
+        <ul>
+            <li><a href="#ana">Ana Sayfa</a></li>
+            <li><a href="#hak">Hakkımda</a>
+                <div class="sub">
+                    <ul>
+                        <li>
+                            <a href="#yet"></a>Yeteneklerim</li>
+                        <li>
+                            <a href="#özel"></a>Özel Bilgilerim</li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#ilet">İletişim</a></li>
+        </ul>
+    </div>
+    <table border="2" style="width: 1300px; margin: auto;">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    <div style="width: auto; height: 60px;"></div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="5" style="width: 350px;">Yan block</td>
+            </tr>
+            <td>
+                <div class="ana">Ana Sayfa</div>
+            </td>
+
+            <tr>
+                <td>
+                    <div class="hak">Yeteneklerim</div>
+                </td>
+            </tr>
+            <tr>
+                <td class="hak">Özel bilgilerim</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <div class="container">
+                        <form id="contact">
+                            <h2>E-Posta</h2>
+                            <div class="form-control">
+                                <input placeholder="Adınız Soyadınız" type="text" required autofocus>
+                            </div>
+                            <div class="form-control">
+                                <input placeholder="E-Posta Adresiniz" type="email" required>
+                            </div>
+                            <div class="form-control">
+                                <input placeholder="Konu" type="text" required>
+                            </div>
+                            <div class="form-control">
+                                <textarea placeholder="Lütfen Mesajınızı Buraya Yazın.." required></textarea>
+                            </div>
+                            <div class="form-control">
+                                <button name="submit" type="submit" id="submit">GÖNDER</button>
+                            </div>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+
+
+
+        </tbody>
     </table>
+
+
+
+
+
 </body>
 
 </html>

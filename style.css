@@ -1,0 +1,140 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 450px;
+    margin: 20px 300px;
+    position: relative;
+    float: right;
+}
+
+#contact {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 100px 0;
+}
+
+#contact h2 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    border: none;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+#contact textarea {
+    height: 120px;
+    max-width: 100%;
+    resize: none;
+}
+
+#contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #79A7A8;
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.menu {
+    background-color: rgb(9, 0, 138);
+    text-align: center;
+    height: 50px;
+}
+
+.menu div {
+    float: right;
+}
+
+.menu ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+.menu ul li {
+    top: 10px;
+    width: 110px;
+    margin: 10px 20px 10px 20px;
+    font-size: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.menu ul li:hover {
+    width: max-content;
+    padding: 5px 30px 5px 30px;
+    background-color: rgb(113, 10, 182);
+    border-radius: 10px;
+}
+
+.sub {
+    display: none;
+}
+
+.menu ul li:hover .sub {
+    display: block;
+    position: absolute;
+    background-color: rgb(9, 0, 138);
+    margin-left: -30px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.menu ul li:hover .sub ul {
+    display: block;
+    padding: 8px;
+}
+
+.ana {
+    margin: 20px 40px;
+    height: 500px;
+    width: 1000px;
+    background-color: aqua;
+    float: right;
+}
+
+.hak {
+    margin: 20px 40px;
+    width: 1000px;
+    height: 500px;
+    background-color: aqua;
+    float: right;
+}
+
+.ilet {
+    margin: 20px 40px;
+    height: 500px;
+    width: 1000px;
+    background-color: aqua;
+    float: right;
+}
