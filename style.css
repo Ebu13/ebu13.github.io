@@ -213,16 +213,24 @@ div.navBulletsWrapper div.active {
 }
 
 .container {
-    width: 450px;
-    margin: 20px 300px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
     position: relative;
-    float: right;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea,
+#contact button[type="submit"] {
+    font: 500 12px/16px "Roboto", Helvetica, Arial, sans-serif;
 }
 
 #contact {
-    background: #ffffff;
+    background: #F9F9F9;
     padding: 25px;
     margin: 100px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #contact h2 {
@@ -233,7 +241,7 @@ div.navBulletsWrapper div.active {
 }
 
 .form-control {
-    border: none;
+    border: none !important;
     margin: 0 0 10px;
     min-width: 100%;
     padding: 0;
@@ -248,6 +256,15 @@ div.navBulletsWrapper div.active {
     background: #FFF;
     margin: 0 0 5px;
     padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact textarea:hover {
+    -webkit-transition: border-color 0.4s ease-in-out;
+    -moz-transition: border-color 0.4s ease-in-out;
+    transition: border-color 0.4s ease-in-out;
+    border: 1px solid #aaa;
 }
 
 #contact textarea {
@@ -265,4 +282,21 @@ div.navBulletsWrapper div.active {
     margin: 0 0 5px;
     padding: 10px;
     font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+    background: #355C7D;
+    -webkit-transition: background 0.4s ease-in-out;
+    -moz-transition: background 0.4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa;
 }
