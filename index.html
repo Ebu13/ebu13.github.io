@@ -16,11 +16,21 @@
 
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+      /* Custom CSS */
+      .nav-item {
+        padding: 0 10px;
+      }
+      .footer-container {
+        background-color: #f8f9fa;
+      }
+    </style>
   </head>
   <body>
-    <!-- Header Bölümü-->
+    <!-- Header Section-->
     <header>
-      <!-- Navbar Bölümü-->
+      <!-- Navbar Section-->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Logo</a>
         <button
@@ -37,23 +47,143 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Yetenekler</a>
+              <a class="nav-link" href="#education"><h3>Education</h3></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projeler</a>
+              <a class="nav-link" href="#skills"><h3>Skills</h3></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">İletişim</a>
+              <a class="nav-link" href="#projects"><h3>Projects</h3></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact"><h3>Contact</h3></a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main></main>
-    <!-- Footer Bölümü-->
-    <footer>
-      <!-- İletişim Bölümü-->
+    <main>
+      <!-- Section 1: Education Information -->
+      <section id="education" class="container">
+        <div class="row">
+          <div class="col-md-12 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Education Information</h5>
+                <p class="card-text">
+                  I am currently studying Software Engineering at Inonu
+                  University and I am in my second year.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Projects -->
+      <section id="projects" class="container">
+        <div class="row">
+          <div class="col-md-12 mt-4 text-center">
+            <h1>Github Projects</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mt-4">
+            <div id="projectsContainer" class="card-deck"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Skills -->
+      <section id="skills" class="container">
+        <div class="row">
+          <div class="col-md-12 mt-4">
+            <h5>Skills</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-3">
+            <p>Microsoft Office/PDF Editing</p>
+            <p>Intermediate Level</p>
+            <p>UI/UX Design</p>
+            <ul>
+              <li>Figma</li>
+              <li>Adobe XD</li>
+            </ul>
+            <p>C/C++/C#/Java/Python Syntax</p>
+            <p>Advanced Level</p>
+            <p>HTML/CSS/JS/Bootstrap</p>
+            <p>Intermediate Level</p>
+            <p>Database CRUD Operations</p>
+            <p>Tutorial Level</p>
+            <p>English</p>
+            <p>Reading, Writing, and Speaking</p>
+            <p>Arabic</p>
+            <p>Level A1</p>
+            <p>API</p>
+            <p>Beginner Level</p>
+            <p>Adobe Logo/Icon/PDF/Photoshop</p>
+            <p>Intermediate Level</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section-->
+    <footer class="footer-container" id="contact">
+      <!-- Contact Section-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h4>Contact Information</h4>
+            <p>
+              Ebubekir Sıddık NAZLI<br />
+              Email: fulldevstudios@gmail.com<br />
+              Github:
+              <a href="https://github.com/Ebu13">https://github.com/Ebu13</a
+              ><br />
+              Dribbble:
+              <a href="https://dribbble.com/devebu"
+                >https://dribbble.com/devebu</a
+              ><br />
+              LinkedIn:
+              <a href="https://www.linkedin.com/in/ebubekir-nazli-13esn/"
+                >https://www.linkedin.com/in/ebubekir-nazli-13esn/</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
+    <script>
+      // Fetching projects with GitHub API
+      $.getJSON(
+        "https://api.github.com/users/Ebu13/repos?type=owner&sort=updated",
+        function (data) {
+          var projectsContainer = $("#projectsContainer");
+
+          data.forEach(function (repo) {
+            var projectTitle = repo.name;
+            var projectLink = repo.html_url;
+            var projectDescription = repo.description;
+
+            var projectHTML = `
+          <div class="col-md-4 mt-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">${projectTitle}</h5>
+                <p class="card-text">${projectDescription}</p>
+                <a href="${projectLink}" class="btn btn-primary">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+        `;
+            projectsContainer.append(projectHTML);
+          });
+        }
+      );
+    </script>
   </body>
 </html>
