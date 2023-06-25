@@ -21,6 +21,11 @@
       .footer-container {
         background-color: #f8f9fa;
       }
+      .contact-icons {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
     </style>
   </head>
   <body>
@@ -90,9 +95,24 @@
         </div>
       </section>
 
-      <!-- Section 3: Skills -->
+      <!-- Section 3: Dribbble Works -->
+      <section id="dribbble-works" class="container">
+        <div class="text-center">
+          <br />
+          <h1 class="card-title text-center">Dribbble Works</h1>
+        </div>
+        <div class="row">
+          <br />
+          <div class="col-md-12 mt-4">
+            <div id="dribbbleWorksContainer" class="card-deck"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Skills -->
       <section id="skills" class="container">
         <div class="text-center">
+          <br />
           <h1 class="card-title text-center">Skills</h1>
         </div>
         <div class="row">
@@ -101,26 +121,46 @@
             <div class="card">
               <div class="card-body">
                 <p class="card-text">Microsoft Office/PDF Editing</p>
-                <p class="card-text">Intermediate Level</p>
+                <ul>
+                  <li>Intermediate Level</li>
+                </ul>
                 <p class="card-text">UI/UX Design</p>
                 <ul>
                   <li>Figma</li>
                   <li>Adobe XD</li>
                 </ul>
                 <p class="card-text">C/C++/C#/Java/Python Syntax</p>
-                <p class="card-text">Advanced Level</p>
+                <ul>
+                  <li>Advanced Level</li>
+                </ul>
                 <p class="card-text">HTML/CSS/JS/Bootstrap</p>
-                <p class="card-text">Intermediate Level</p>
+                <ul>
+                  <li>Intermediate Level</li>
+                </ul>
                 <p class="card-text">Database CRUD Operations</p>
-                <p class="card-text">Tutorial Level</p>
+                <ul>
+                  <li>Advanced Level</li>
+                </ul>
                 <p class="card-text">English</p>
-                <p class="card-text">Reading, Writing, and Speaking</p>
+                <ul>
+                  <li>Reading, Writing, and Speaking</li>
+                </ul>
                 <p class="card-text">Arabic</p>
-                <p class="card-text">Level A1</p>
+                <ul>
+                  <li>Level A1</li>
+                </ul>
+                <p class="card-text">German</p>
+                <ul>
+                  <li>Level A2</li>
+                </ul>
                 <p class="card-text">API</p>
-                <p class="card-text">Beginner Level</p>
+                <ul>
+                  <li>Beginner Level</li>
+                </ul>
                 <p class="card-text">Adobe Logo/Icon/PDF/Photoshop</p>
-                <p class="card-text">Intermediate Level</p>
+                <ul>
+                  <li>Intermediate Level</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -133,18 +173,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h4 class="mb-4" style="font-size: 24px">Contact Information</h4>
+            <br />
+            <h1 class="mb-4">Contact Information</h1>
           </div>
           <div class="col-md-12 text-center">
-            <a
-              href="mailto:fulldevstudios@gmail.com"
-              style="margin-right: 10px; font-size: 18px"
-            >
+            <a href="mailto:fulldevstudios@gmail.com" style="font-size: 18px">
               <img
                 src="assets/icons8-mail-100.png"
                 alt="Email"
-                width="30"
-                height="30"
+                class="contact-icons"
               />
               fulldevstudios@gmail.com
             </a>
@@ -155,26 +192,21 @@
               <img
                 src="assets/icons8-github.svg"
                 alt="GitHub"
-                width="30"
-                height="30"
-                style="margin-right: 10px"
+                class="contact-icons"
               />
             </a>
             <a href="https://dribbble.com/devebu">
               <img
                 src="assets/icons8-dribbble-100.png"
                 alt="Dribbble"
-                width="30"
-                height="30"
-                style="margin-right: 10px"
+                class="contact-icons"
               />
             </a>
             <a href="https://www.linkedin.com/in/ebubekir-nazli-13esn/">
               <img
                 src="assets/icons8-linkedin-100.png"
                 alt="LinkedIn"
-                width="30"
-                height="30"
+                class="contact-icons"
               />
             </a>
           </div>
@@ -206,6 +238,32 @@
         </div>
       `;
             projectsContainer.append(projectHTML);
+          });
+        }
+      );
+      // Fetching Dribbble shots with Dribbble API
+      $.getJSON(
+        "https://api.dribbble.com/v2/user/shots?access_token=0db77ddcb899cffee5a031ff94876f5bb00bd1a5dce11c75b0fa5003ce4338d3",
+        function (data) {
+          var dribbbleWorksContainer = $("#dribbbleWorksContainer");
+
+          data.forEach(function (shot) {
+            var shotTitle = shot.title;
+            var shotImage = shot.images.normal;
+            var shotLink = shot.html_url;
+
+            var shotHTML = `
+        <div class="col-md-4 mt-4">
+          <div class="card">
+            <img src="${shotImage}" class="card-img-top" alt="${shotTitle}">
+            <div class="card-body">
+              <h5 class="card-title">${shotTitle}</h5>
+              <a href="${shotLink}" class="btn btn-primary">View on Dribbble</a>
+            </div>
+          </div>
+        </div>
+      `;
+            dribbbleWorksContainer.append(shotHTML);
           });
         }
       );
