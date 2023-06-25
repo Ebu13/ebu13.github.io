@@ -95,21 +95,7 @@
         </div>
       </section>
 
-      <!-- Section 3: Dribbble Works -->
-      <section id="dribbble-works" class="container">
-        <div class="text-center">
-          <br />
-          <h1 class="card-title text-center">Dribbble Works</h1>
-        </div>
-        <div class="row">
-          <br />
-          <div class="col-md-12 mt-4">
-            <div id="dribbbleWorksContainer" class="card-deck"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 4: Skills -->
+      <!-- Section 3: Skills -->
       <section id="skills" class="container">
         <div class="text-center">
           <br />
@@ -238,32 +224,6 @@
         </div>
       `;
             projectsContainer.append(projectHTML);
-          });
-        }
-      );
-      // Fetching Dribbble shots with Dribbble API
-      $.getJSON(
-        "https://api.dribbble.com/v2/user/shots?access_token=0db77ddcb899cffee5a031ff94876f5bb00bd1a5dce11c75b0fa5003ce4338d3",
-        function (data) {
-          var dribbbleWorksContainer = $("#dribbbleWorksContainer");
-
-          data.forEach(function (shot) {
-            var shotTitle = shot.title;
-            var shotImage = shot.images.normal;
-            var shotLink = shot.html_url;
-
-            var shotHTML = `
-        <div class="col-md-4 mt-4">
-          <div class="card">
-            <img src="${shotImage}" class="card-img-top" alt="${shotTitle}">
-            <div class="card-body">
-              <h5 class="card-title">${shotTitle}</h5>
-              <a href="${shotLink}" class="btn btn-primary">View on Dribbble</a>
-            </div>
-          </div>
-        </div>
-      `;
-            dribbbleWorksContainer.append(shotHTML);
           });
         }
       );
