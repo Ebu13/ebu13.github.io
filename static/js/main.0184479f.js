@@ -26770,7 +26770,7 @@
       },
       5241: function (e, t, n) {
         "use strict";
-        e.exports = n.p + "static/media/iiitk_logo.170d558551a09a7d1620.png";
+        e.exports = n.p + "static/media/inonu.png";
       },
       3026: function (e, t, n) {
         "use strict";
@@ -26826,7 +26826,7 @@
       },
       2032: function (e, t, n) {
         "use strict";
-        e.exports = n.p + "static/media/tiktok_logo.bf41765c122d4b0f3fee.png";
+        e.exports = n.p + "static/media/ebebek.png";
       },
     },
     t = {};
