@@ -1,4 +1,4 @@
-/*! For license information please see main.082d6e3b.js.LICENSE.txt */
+/*! For license information please see main.c0dd603b.js.LICENSE.txt */
 !(function () {
   var e = {
       4708: function (e, t, n) {
@@ -30773,7 +30773,7 @@
           });
         }),
         jr = n(1394),
-        Er = !0,
+        Er = !1,
         Tr = {
           title: "Ebubekir's Portfolio",
           description:
@@ -30855,7 +30855,7 @@
               fileName: "FullStackImg",
               skills: [
                 "\u26a1 Building responsive website front end using React-Redux",
-                "\u26a1 Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
+                "\u26a1 Building responsive website front end using Angular and Vue",
                 "\u26a1 Creating application backend in Node, Express & Flask",
               ],
               softwareSkills: [
@@ -30885,29 +30885,24 @@
                   style: { color: "#61DAFB" },
                 },
                 {
-                  skillName: "NodeJS",
-                  fontAwesomeClassname: "simple-icons:node-dot-js",
-                  style: { color: "#339933" },
-                },
-                {
                   skillName: "NPM",
                   fontAwesomeClassname: "simple-icons:npm",
                   style: { color: "#CB3837" },
                 },
                 {
-                  skillName: "Yarn",
-                  fontAwesomeClassname: "simple-icons:yarn",
-                  style: { color: "#2C8EBB" },
+                  skillName: "Django",
+                  fontAwesomeClassname: "simple-icons:django",
+                  style: { color: "#267330" },
                 },
                 {
-                  skillName: "Gatsby",
-                  fontAwesomeClassname: "simple-icons:gatsby",
-                  style: { color: "#663399" },
+                  skillName: "Angular",
+                  fontAwesomeClassname: "simple-icons:angular",
+                  style: { color: "#B03B3B" },
                 },
                 {
-                  skillName: "Flutter",
-                  fontAwesomeClassname: "simple-icons:flutter",
-                  style: { color: "#02569B" },
+                  skillName: "TypeScript",
+                  fontAwesomeClassname: "simple-icons:typescript",
+                  style: { color: "#3D50B8" },
                 },
               ],
             },
@@ -30999,10 +30994,10 @@
         zr = {
           competitiveSites: [
             {
-              siteName: "LeetCode",
-              iconifyClassname: "simple-icons:leetcode",
-              style: { color: "#F79F1B" },
-              profileLink: "https://leetcode.com/layman_brother/",
+              siteName: "Oracle",
+              iconifyClassname: "simple-icons:oracle",
+              style: { color: "#7E2A2A" },
+              profileLink: "https://education.oracle.com/",
             },
             {
               siteName: "HackerRank",
@@ -31011,58 +31006,33 @@
               profileLink: "https://www.hackerrank.com/layman_brother",
             },
             {
-              siteName: "Codechef",
-              iconifyClassname: "simple-icons:codechef",
-              style: { color: "#5B4638" },
-              profileLink: "https://www.codechef.com/users/ashutosh_1919",
-            },
-            {
-              siteName: "Codeforces",
-              iconifyClassname: "simple-icons:codeforces",
-              style: { color: "#1F8ACB" },
-              profileLink: "http://codeforces.com/profile/layman_brother",
-            },
-            {
-              siteName: "Hackerearth",
-              iconifyClassname: "simple-icons:hackerearth",
-              style: { color: "#323754" },
-              profileLink: "https://www.hackerearth.com/@ashutosh391",
-            },
-            {
-              siteName: "Kaggle",
+              siteName: "BTK",
               iconifyClassname: "simple-icons:kaggle",
               style: { color: "#20BEFF" },
-              profileLink: "https://www.kaggle.com/laymanbrother",
+              profileLink: "https://www.btkakademi.gov.tr/portal",
+            },
+            {
+              siteName: "Turkcell",
+              iconifyClassname: "simple-icons:arcticons:turkcell",
+              style: { color: "yellow" },
+              profileLink: "https://gelecegiyazanlar.turkcell.com.tr/egitimler",
             },
           ],
         },
         Br = {
           degrees: [
             {
-              title: "Indian Institute of Information Technology Kurnool",
-              subtitle: "B.Tech. in Computer Engineering",
+              title: "Inonu University",
+              subtitle: "B.Tech. in Software Engineering",
               logo_path: "iiitk_logo.png",
-              alt_name: "IIITDM Kurnool",
-              duration: "2016 - 2020",
+              alt_name: "inonu",
+              duration: "2021 - 2025",
               descriptions: [
                 "\u26a1 I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.",
                 "\u26a1 Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.",
                 "\u26a1 I was selected for Merit cum Means Scholarship which is given to top 10% of students in college. I have received award from respected director for consistently best performance in academics.",
               ],
-              website_link: "http://iiitk.ac.in",
-            },
-            {
-              title: "Indiana University Bloomington",
-              subtitle: "M.S. in Computer Science",
-              logo_path: "iu_logo.png",
-              alt_name: "Indiana University Bloomington",
-              duration: "2021 - 2023",
-              descriptions: [
-                "\u26a1 I have taken varity of courses related to Artificial Intelligence which correspond to Explainable AI, Graph Machine Learning, Computer Vision etc.",
-                "\u26a1 Apart from this, I have also done research assistantship. As part of it, I have worked on creating new algorithms in Graph ML and Network Science.",
-                "\u26a1 During my time at university, I was also associated with multimedia department. As part of it, I have worked on some documentry films and interviews.",
-              ],
-              website_link: "https://www.indiana.edu/",
+              website_link: "https://www.inonu.edu.tr/",
             },
           ],
         },
@@ -31382,28 +31352,27 @@
           title: "Contact Me",
           profile_image_path: "animated_ashutosh.png",
           description:
-            "I am available on almost every social media. You can message me, I will reply within 24 hours. I can help you with ML, AI, React, Android, Cloud and Opensource Development.",
+            "I'm across it on almost every social media. You can message me, I will reply within 24 hours. I can help you with AI, Web and Open Source Development.",
         },
         qr = {
           title: "Blogs",
           subtitle:
             "For individual fundamental empowerment, I like to write powerful lessons that create impact on each of the reader individually to change the core of their character.",
-          link: "https://blogs.ashutoshhathidara.com/",
+          link: "",
           avatar_image_path: "blogs_image.svg",
         },
         Qr = {
           title: "Address",
-          subtitle:
-            "Ambavadi vas, Kanodar, T.A.-Palanpur, Dist.-Banaskantha, Gujarat - 385520",
-          locality: "Kanodar",
-          country: "IN",
-          region: "Gujarat",
-          postalCode: "385520",
-          streetAddress: "Ambavadi vas",
+          subtitle: "Istanbul / Atasehir",
+          locality: "Marmara",
+          country: "Turkey",
+          region: "Anatolia",
+          postalCode: "34707",
+          streetAddress: "",
           avatar_image_path: "address_image.svg",
-          location_map_link: "https://goo.gl/maps/MpMqtRZytFchMkZ76",
+          location_map_link: "",
         },
-        Kr = { title: "", subtitle: "" },
+        Kr = { title: "(+90)Turkey", subtitle: "553 165 1382" },
         Jr = n(9475),
         $r = n.n(Jr),
         ea = n(77),
@@ -45021,4 +44990,3 @@
           });
     })();
 })();
-//# sourceMappingURL=main.082d6e3b.js.map
