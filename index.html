@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js"></script>
     <link
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
     <title>Portfolio</title>
   </head>
   <body>
@@ -39,11 +37,11 @@
     <main class="container py-5">
       <section id="about">
         <h2>Hakkımda</h2>
-        <p>Kendim hakkında kısa bir biyografi buraya gelecek.</p>
+        <p>Kendini geliştiren ve sürekli güncel teknolojileri takip eden bir yazılımcıyım.</p>
       </section>
 
       <section id="projeler">
-        <h2>Projeler</h2>
+        <center><h2>Projeler</h2></center>
         <div id="projects" class="container"></div>
       </section>
 
@@ -52,7 +50,7 @@
           <h2 class="text-center mb-5">İletişim</h2>
           <div class="row justify-content-center">
             <div class="col-md-6">
-              <form action="#" method="POST">
+              <form action="contact.php" method="POST">
                 <div class="form-group">
                   <label for="name">Adınız:</label>
                   <input
@@ -106,33 +104,6 @@
     <!-- Bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
-  <script>
-    $(document).ready(function () {
-      var username = "Ebu13"; // GitHub kullanıcı adınız
-      var url = "https://api.github.com/users/" + username + "/repos";
-
-      $.get(url, function (data) {
-        var projects = '<div class="row">';
-        $.each(data, function (index, project) {
-          if (index % 3 == 0 && index != 0) {
-            projects += '</div><div class="row">';
-          }
-          projects += '<div class="col-md-4 mb-4">';
-          projects += '<div class="card">';
-          projects += '<div class="card-body">';
-          projects += '<h3 class="card-title">' + project.name + "</h3>";
-          projects += '<p class="card-text">' + project.description + "</p>";
-          projects +=
-            '<a href="' +
-            project.html_url +
-            '" class="btn btn-primary">Projeyi Görüntüle</a>';
-          projects += "</div></div></div>";
-        });
-        projects += "</div>";
-        $("#projects").html(projects);
-      });
-    });
-  </script>
 </html>
