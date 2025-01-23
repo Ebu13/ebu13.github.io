@@ -1,66 +1,157 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Benim Portföyüm</title>
     <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="bg-dark text-white py-5">
-      <div class="container text-center">
-        <h1>Hoş Geldiniz</h1>
-        <p>Portföyüme göz atın</p>
+    <!-- Header -->
+    <header
+      class="hero d-flex align-items-center justify-content-center text-center"
+    >
+      <div class="container">
+        <h1 class="display-3 fw-bold text-white">Merhaba, Ben Ebubekir</h1>
+        <p class="lead text-white-50">
+          Full-stack geliştirici ve problem çözücüyüm. İşte projelerim ve daha
+          fazlası!
+        </p>
+        <a href="#about" class="btn btn-outline-light btn-lg mt-3"
+          >Beni Tanıyın</a
+        >
       </div>
     </header>
 
-    <nav class="bg-light py-3">
-      <div class="container text-center">
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">Hakkımda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projeler">Projeler</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">İletişim</a>
-          </li>
-        </ul>
+    <section id="about" class="container my-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 text-center">
+          <img
+            src="https://avatars.githubusercontent.com/u/101016149?v=4"
+            alt="Hakkımda"
+            class="img-fluid rounded-circle shadow-lg"
+            style="max-width: 300px; border: 5px solid #f1f1f1"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="mb-4" style="font-weight: bold; color: #6a11cb">
+            Hakkımda
+          </h2>
+          <p style="font-size: 1.1rem; line-height: 1.8">
+            Merhaba! Ben Ebu13. Yazılım geliştirme, problem çözme ve yaratıcı
+            projeler oluşturma konusunda tutkulu bir geliştiriciyim. GitHub
+            projelerim, yenilikçi fikirlerimi hayata geçirme yolculuğumu
+            yansıtıyor.
+          </p>
+          <p style="font-size: 1.1rem; line-height: 1.8">
+            Amacım, yazılım dünyasında sürekli öğrenmek ve çevreme fayda
+            sağlayacak projeler geliştirmek.
+          </p>
+          <a
+            href="#projects"
+            class="btn btn-primary btn-lg shadow"
+            style="
+              background: linear-gradient(135deg, #6a11cb, #2575fc);
+              border: none;
+            "
+            >Projelerime Göz Atın</a
+          >
+        </div>
       </div>
-    </nav>
+    </section>
 
-    <main class="container py-5">
-      <section id="about">
-        <h2>Hakkımda</h2>
-        <p>
-          Kendini geliştiren ve sürekli güncel teknolojileri takip eden bir
-          yazılımcıyım.
-        </p>
-        <br>
-      </section>
+    <!-- Projects Section -->
+    <section id="projects" class="container my-5">
+      <h2 class="text-center mb-4">Projelerim</h2>
+      <div class="mb-3">
+        <input
+          type="text"
+          id="search"
+          class="form-control"
+          placeholder="Projelerde Ara..."
+        />
+      </div>
+      <div id="repos" class="row g-4">
+        <!-- Repositories will be loaded here dynamically -->
+      </div>
+    </section>
 
-      <section id="projeler">
-        <center><h2>Public Projeler</h2></center>
-        <div id="projects" class="container"></div>
-      </section>
-    </main>
-
-    <footer class="bg-dark text-white py-4 text-center">
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 text-white">
       <div class="container">
-        <p>© 2024 Portföy</p>
+        <h2 class="text-center mb-4">İletişim</h2>
+        <p class="text-center mb-5">
+          Bana ulaşmak için aşağıdaki formu doldurun veya sosyal medya
+          hesaplarıma göz atın:
+        </p>
+        <form
+          action="https://formspree.io/f/manqypvv"
+          method="POST"
+          id="contact-form"
+          class="mx-auto"
+          style="max-width: 600px"
+        >
+          <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              placeholder="Adınız"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="E-posta Adresiniz"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <textarea
+              class="form-control"
+              name="message"
+              rows="4"
+              placeholder="Mesajınız"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Gönder</button>
+        </form>
+        <div
+          id="thank-you-message"
+          class="text-center mt-4"
+          style="display: none"
+        >
+          <span class="text-success fw-bold"
+            >Mesajınız yollandı. Geri dönüş yapılacaktır.</span
+          >
+        </div>
+        <div class="text-center mt-4">
+          <a href="https://github.com/Ebu13" class="text-white mx-2"
+            ><i class="fab fa-github fa-2x"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ebubekir-nazli-13esn/"
+            class="text-white mx-2"
+            ><i class="fab fa-linkedin fa-2x"></i
+          ></a>
+        </div>
       </div>
-    </footer>
+    </section>
 
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Custom JS -->
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
